@@ -2,11 +2,13 @@
 
 Dockerfile to build image for shadowsocks
 
-run
+Build your own image by run
 ```
 docker build -t ss
 
 docker run -i -t ss
 ```
 
-setup config by /etc/shadowsocks.json file 
+or just use the image I had build https://hub.docker.com/r/wejie/ss_ladder/
+
+after start you container, just setup config by /etc/shadowsocks.json file 

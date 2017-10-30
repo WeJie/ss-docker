@@ -9,6 +9,6 @@ docker build -t ss
 docker run -i -t ss
 ```
 
-or just use the image I had build https://hub.docker.com/r/wejie/ss_ladder/
+or just use the image I have built https://hub.docker.com/r/wejie/ss_ladder/
 
 after start you container, just setup config by /etc/shadowsocks.json file 

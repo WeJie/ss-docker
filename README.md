@@ -12,3 +12,8 @@ docker run -i -t ss
 or just use the image I have built https://hub.docker.com/r/wejie/ss_ladder/
 
 after start you container, just setup config by /etc/shadowsocks.json file 
+
+start server
+```
+ssserver -c /etc/shadowsocks.json -d start
+```

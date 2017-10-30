@@ -22,12 +22,18 @@ ADD shadowsocks.json /etc/
 WORKDIR /home/ubuntu
 RUN cd /home/ubuntu
 
-ADD ss-ban.log /home/ubuntu
+ADD ss-ban.log /home/ubuntu/log
+ADD ss.bash /home/ubuntu/ss.bash
 
 RUN wget https://raw.githubusercontent.com/shadowsocks/shadowsocks/master/utils/autoban.py
 RUN echo 'sudo ssserver -c /etc/shadowsocks.json -d start\n\
-          /root/autoban.py < /var/log/shadowsocks.log\n\
-					nohup tail -F /var/log/shadowsocks.log | python /root/autoban.py >log 2>log &' > /etc/rc.local
+          /home/ubuntu/autoban.py < /var/log/shadowsocks.log\n\
+					nohup tail -F /var/log/shadowsocks.log | python /home/ubunntu/autoban.py >log 2>log &' > /etc/rc.local
 
-EXPOSE 701 10087
+# RUN ssserver -c /etc/shadowsocks.json -d start
+# RUN /home/ubuntu/autoban.py < /var/log/shadowsocks.log
+# RUN nohup tail -F /var/log/shadowsocks.log | python /home/ubunntu/autoban.py >log 2>log &
+
+
+EXPOSE 701
 

@@ -3,7 +3,7 @@
     "server_port": 701,
     "local_address": "127.0.0.1",
     "local_port": 10087,
-    "password":"",
+    "password":"yourverycomplexpassword",
     "timeout":300,
     "method":"aes-256-cfb",
     "fast_open": false

@@ -28,7 +28,6 @@ RUN chmod +x ss.sh
 
 RUN wget https://raw.githubusercontent.com/shadowsocks/shadowsocks/master/utils/autoban.py
 RUN echo 'sudo ssserver -c /etc/shadowsocks.json -d start\n\
-          python /home/ubuntu/autoban.py < /var/log/shadowsocks.log\n\
 					nohup tail -F /var/log/shadowsocks.log | python /home/ubunntu/autoban.py >log 2>log &' > /etc/rc.local
 
 EXPOSE 701
